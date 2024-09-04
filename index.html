@@ -7,38 +7,42 @@
     <body>
         <section id="hero">
             <div id="calc">
-                <div id="visor">0</div>
-                <table>
-                    <tr>
-                        <td class="btn-sup">AC</td>
-                        <td class="btn-sup">+/-</td>
-                        <td class="btn-sup">%</td>
-                        <td class="btn-op">/</td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td>8</td>
-                        <td>9</td>
-                        <td class="btn-op">X</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>5</td>
-                        <td>6</td>
-                        <td class="btn-op">-</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>2</td>
-                        <td>1</td>
-                        <td class="btn-op">+</td>
-                    </tr>
-                    <tr>
-                        <td id="btn-z" colspan="2">0</td>
-                        <td>,</td>
-                        <td class="btn-op">=</td>
-                    </tr>
-                </table>
+                <form name="calculadora">
+                    <table>
+                        <tr>
+                            <input type="text" name="visor" size="30" id="visor" readonly>
+                        </tr>
+                        <tr>
+                            <td><input type="reset" value="AC" class="btn-sup"></td>
+                            <td><a href="https://linkedin.com/in/israel-silas-69ba9b1a8" id="btn-link">in</a></td>
+                            <td><input type="button" value="%" name="div" class="btn-sup" onclick="calculadora.visor.value += '/100'"></td>
+                            <td><input type="button" value="/" name="div" class="btn-op" onclick="calculadora.visor.value += '/'"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="button" value="7" name="sete" class="btn" onclick="calculadora.visor.value += '7'"></td>
+                            <td><input type="button" value="8" name="oito" class="btn" onclick="calculadora.visor.value += '8'"></td>
+                            <td><input type="button" value="9" name="nove" class="btn" onclick="calculadora.visor.value += '9'"></td>
+                            <td><input type="button" value="X" name="mult" class="btn-op" onclick="calculadora.visor.value += '*'"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="button" value="4" name="quatro" class="btn" onclick="calculadora.visor.value += '4'"></td>
+                            <td><input type="button" value="5" name="cinco" class="btn" onclick="calculadora.visor.value += '5'"></td>
+                            <td><input type="button" value="6" name="seis" class="btn" onclick="calculadora.visor.value += '6'"></td>
+                            <td><input type="button" value="-" name="sub" class="btn-op" onclick="calculadora.visor.value += '-'"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="button" value="3" name="tres" class="btn" onclick="calculadora.visor.value += '3'"></td>
+                            <td><input type="button" value="2" name="dois" class="btn" onclick="calculadora.visor.value += '2'"></td>
+                            <td><input type="button" value="1" name="um" class="btn" onclick="calculadora.visor.value += '1'"></td>
+                            <td><input type="button" value="+" name="soma" class="btn-op" onclick="calculadora.visor.value += '+'"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input type="button" value="0" name="zero" id="btn-z" onclick="calculadora.visor.value += '0'"></td>
+                            <td><input type="button" value="," name="ponto" class="btn" onclick="calculadora.visor.value += ','"></td>
+                            <td><input type="button" value="=" name="result" class="btn-op" onclick="calculadora.visor.value = eval(calculadora.visor.value)" ></td>
+                        </tr>
+                    </table>
+                </form>
             </div>
         </section>    
     </body>
