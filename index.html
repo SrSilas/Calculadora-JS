@@ -3,6 +3,7 @@
     <head>
         <title>Calculadora</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <section id="hero">
@@ -13,7 +14,7 @@
                             <input type="text" name="visor" size="30" id="visor" readonly>
                         </tr>
                         <tr>
-                            <td><input type="reset" value="AC" class="btn-sup"></td>
+                            <td><input type="reset" value="AC" id="btn-ac"></td>
                             <td><a href="https://linkedin.com/in/israel-silas-69ba9b1a8" id="btn-link">in</a></td>
                             <td><input type="button" value="%" name="div" class="btn-sup" onclick="calculadora.visor.value += '/100'"></td>
                             <td><input type="button" value="/" name="div" class="btn-op" onclick="calculadora.visor.value += '/'"></td>
